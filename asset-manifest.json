@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/git@github.com:Perry-Olsson/swapi.git/static/css/main.897e90da.chunk.css",
+    "main.js": "/git@github.com:Perry-Olsson/swapi.git/static/js/main.2d5bd0b8.chunk.js",
+    "main.js.map": "/git@github.com:Perry-Olsson/swapi.git/static/js/main.2d5bd0b8.chunk.js.map",
+    "runtime-main.js": "/git@github.com:Perry-Olsson/swapi.git/static/js/runtime-main.7c933202.js",
+    "runtime-main.js.map": "/git@github.com:Perry-Olsson/swapi.git/static/js/runtime-main.7c933202.js.map",
+    "static/css/2.3b6f1bda.chunk.css": "/git@github.com:Perry-Olsson/swapi.git/static/css/2.3b6f1bda.chunk.css",
+    "static/js/2.99399b2a.chunk.js": "/git@github.com:Perry-Olsson/swapi.git/static/js/2.99399b2a.chunk.js",
+    "static/js/2.99399b2a.chunk.js.map": "/git@github.com:Perry-Olsson/swapi.git/static/js/2.99399b2a.chunk.js.map",
+    "index.html": "/git@github.com:Perry-Olsson/swapi.git/index.html",
+    "precache-manifest.9cb7c59e69e9e5a3a117dceb0a99f3bc.js": "/git@github.com:Perry-Olsson/swapi.git/precache-manifest.9cb7c59e69e9e5a3a117dceb0a99f3bc.js",
+    "service-worker.js": "/git@github.com:Perry-Olsson/swapi.git/service-worker.js",
+    "static/css/2.3b6f1bda.chunk.css.map": "/git@github.com:Perry-Olsson/swapi.git/static/css/2.3b6f1bda.chunk.css.map",
+    "static/css/main.897e90da.chunk.css.map": "/git@github.com:Perry-Olsson/swapi.git/static/css/main.897e90da.chunk.css.map",
+    "static/js/2.99399b2a.chunk.js.LICENSE.txt": "/git@github.com:Perry-Olsson/swapi.git/static/js/2.99399b2a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7c933202.js",
+    "static/css/2.3b6f1bda.chunk.css",
+    "static/js/2.99399b2a.chunk.js",
+    "static/css/main.897e90da.chunk.css",
+    "static/js/main.2d5bd0b8.chunk.js"
+  ]
+}
