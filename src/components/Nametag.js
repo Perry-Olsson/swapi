@@ -21,7 +21,7 @@ class Nametag extends Component {
     };
   }
 
-  async handleStart(event) {
+  handleStart(event) {
     const nametag = event.target;
     setTimeout(() => {
       this.setState({ isHovering: true });
