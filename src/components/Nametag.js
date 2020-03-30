@@ -10,8 +10,9 @@ class Nametag extends Component {
       mass: person.mass,
       gender: person.gender
     };
-    this.handleEnter = this.handleEnter.bind(this);
+
     this.handleExit = this.handleExit.bind(this);
+    this.handleStart = this.handleStart.bind(this);
   }
 
   toggleHoverState(state) {
@@ -20,23 +21,22 @@ class Nametag extends Component {
     };
   }
 
-  async handleEnter(event) {
-    const hoveredNametag = event.target;
-    const getHeight = () => {
-      return hoveredNametag.offsetHeight;
-    };
+  async handleStart(event) {
+    const nametag = event.target;
     setTimeout(() => {
-      if (getHeight() > 280) {
-        this.setState(this.toggleHoverState);
-      }
+      this.setState({ isHovering: true });
     }, 150);
-
-    //}
+    setTimeout(() => {
+      if (nametag.offsetHeight < 250) {
+        this.setState({ isHovering: false });
+      }
+    }, 151);
   }
 
   handleExit() {
     setTimeout(() => {
       this.setState({ isHovering: false });
+      console.log(2);
     }, 10);
   }
 
@@ -46,7 +46,7 @@ class Nametag extends Component {
       <div
         id="nametag"
         className="hover flex flex-column justify-center items-center box ba b--yellow white br4 ph4 mv3 f3"
-        onMouseEnter={this.handleEnter}
+        onAnimationStart={this.handleStart}
         onMouseLeave={this.handleExit}
       >
         <h3>{name}</h3>

@@ -7,4 +7,24 @@
 
 #nametag:hover {
   height: 300px;
+  animation-name: grow;
+  animation-duration: 0.2s;
+}
+
+@keyframes grow {
+  from {
+    height: 100px;
+  }
+  to {
+    height: 300px;
+  }
+}
+
+@keyframes shrink {
+  from {
+    height: 300px;
+  }
+  to {
+    height: 100px;
+  }
 }
