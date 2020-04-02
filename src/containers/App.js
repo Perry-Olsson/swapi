@@ -89,23 +89,18 @@ class App extends Component {
     const people = [...this.state.people];
     people[id] = { ...people[id] };
     setTimeout(() => {
-      people[id].isHovering = true;
-      this.setState({ people });
-    }, 150);
-    setTimeout(() => {
-      if (nametag.offsetHeight < 250) {
-        people[id].isHovering = false;
+      if (nametag.offsetHeight > 270) {
+        people[id].isHovering = true;
         this.setState({ people });
       }
-    }, 151);
+    }, 150);
   }
 
   handleExit(id) {
     const people = [...this.state.people];
-    setTimeout(() => {
-      people[id].isHovering = false;
-      this.setState({ people });
-    }, 10);
+    people[id] = { ...people[id] };
+    people[id].isHovering = false;
+    this.setState({ people });
   }
 
   render() {
