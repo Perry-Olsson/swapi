@@ -1,60 +1,33 @@
 import React, { Component } from "react";
 
 class Nametag extends Component {
-  constructor({ person }) {
-    super({ person });
-    this.state = {
-      isHovering: false,
-      name: person.name,
-      height: person.height,
-      mass: person.mass,
-      gender: person.gender
-    };
-
-    this.handleExit = this.handleExit.bind(this);
-    this.handleStart = this.handleStart.bind(this);
+  componentWillUnmount() {
+    console.log("hello");
   }
-
-  toggleHoverState(state) {
-    return {
-      isHovering: !state.isHovering
-    };
-  }
-
-  handleStart(event) {
-    const nametag = event.target;
-    setTimeout(() => {
-      this.setState({ isHovering: true });
-    }, 150);
-    setTimeout(() => {
-      if (nametag.offsetHeight < 250) {
-        this.setState({ isHovering: false });
-      }
-    }, 151);
-  }
-
-  handleExit() {
-    setTimeout(() => {
-      this.setState({ isHovering: false });
-      console.log(2);
-    }, 10);
-  }
-
   render() {
-    const { name, height, mass, gender } = this.state;
+    const { person, onAnimationStart, onMouseLeave, id } = this.props;
     return (
       <div
-        id="nametag"
-        className="hover flex flex-column justify-center items-center box ba b--yellow white br4 ph4 mv3 f3"
-        onAnimationStart={this.handleStart}
-        onMouseLeave={this.handleExit}
+        className="nametag flex flex-column justify-center items-center box ba b--yellow white br4 ph4 mv3 f3"
+        onAnimationStart={event => {
+          return onAnimationStart(event, id);
+        }}
+        onMouseLeave={() => {
+          return onMouseLeave(id);
+        }}
       >
-        <h3>{name}</h3>
-        {this.state.isHovering && (
-          <div className="hover extendedInfo">
-            <p>height: {height}</p>
-            <p>mass: {mass}</p>
-            <p>gender: {gender}</p>
+        <h3>{person.name}</h3>
+        {person.isHovering && (
+          <div className="">
+            <p>height: {person.height}</p>
+            <p>mass: {person.mass}</p>
+            <p>gender: {person.gender}</p>
+            <p>
+              homeworld:{" "}
+              {person.homeworld.includes("https")
+                ? "loading..."
+                : person.homeworld}
+            </p>
           </div>
         )}
       </div>

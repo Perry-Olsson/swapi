@@ -1,18 +1,27 @@
-import React from 'react';
-import Nametag from './Nametag';
+import React from "react";
+import Nametag from "./Nametag";
 
-const NametagList = ({ people }) => {
-    console.log(people);
-    return (
-        //<p>hello</p>
-        <div className='flex flex-wrap mh3 justify-around'>
-            {
-                people.map((person, i) => {
-                    return <Nametag key={person.name} person={person} />
-                }) 
-            }
-        </div> 
-    )
-}
+const NametagList = ({
+  onAnimationStart,
+  onMouseLeave,
+  people,
+  getHomeWorld
+}) => {
+  return (
+    <div className="flex flex-wrap mh3 justify-around">
+      {people.map((person, i) => {
+        return (
+          <Nametag
+            key={person.name}
+            onAnimationStart={onAnimationStart}
+            onMouseLeave={onMouseLeave}
+            person={person}
+            id={i}
+          />
+        );
+      })}
+    </div>
+  );
+};
 
-export default NametagList
+export default NametagList;
