@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .nametag {
   height: 100px;
   width: 19%;
