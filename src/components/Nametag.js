@@ -9,7 +9,7 @@ class Nametag extends Component {
     return (
       <div
         className="nametag flex flex-column justify-center items-center box ba b--yellow white br4 ph4 mv3 f3"
-        onAnimationStart={event => {
+        onAnimationStart={(event) => {
           return onAnimationStart(event, id);
         }}
         onMouseLeave={() => {
@@ -24,7 +24,7 @@ class Nametag extends Component {
             <p>gender: {person.gender}</p>
             <p>
               homeworld:{" "}
-              {person.homeworld.includes("https")
+              {person.homeworld.includes("http")
                 ? "loading..."
                 : person.homeworld}
             </p>
